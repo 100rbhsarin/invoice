@@ -4,12 +4,12 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #9bc3f0;
+    background-color: #acdaf1;
     margin: 0;
     flex-direction: column;
 }
 
-.container, .invoice-container {
+.container, .receipt-container {
     display: none;
 }
 
@@ -19,8 +19,8 @@ body {
     max-width: 500px;
 }
 
-.container, .invoice {
-    background-color: rgb(185, 211, 247);
+.container, .receipt {
+    background-color: white;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
@@ -54,22 +54,38 @@ button:hover {
     background-color: #218838;
 }
 
-.invoice {
-    width: 90%;
-    max-width: 57mm;
+.receipt {
+    width: 57mm;
+    max-width: 100%;
     margin: 0 auto;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
     text-align: center;
+    font-size: 12px;
 }
 
-.invoice h2, .invoice h3 {
+.receipt h2 {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+.receipt p {
     margin: 5px 0;
 }
 
-.invoice p {
+.divider {
     margin: 5px 0;
+    text-align: center;
+}
+
+.customer-details {
+    text-align: left;
+}
+
+.total-amount {
+    text-align: right;
+    font-weight: bold;
 }
 
 @media (max-width: 600px) {
@@ -78,11 +94,44 @@ button:hover {
         padding: 10px;
     }
 
-    .invoice {
+    .receipt {
         width: 100%;
     }
 
     button {
         width: 100%;
+    }
+}
+
+/* Print styles */
+@media print {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: white;
+    }
+
+    .container, .receipt-container {
+        display: block;
+    }
+
+    .receipt {
+        width: 57mm;
+        margin: 0;
+        padding: 10px;
+        border: none;
+        font-size: 12px;
+    }
+
+    button {
+        display: none;
+    }
+
+    @page {
+        size: 57mm auto;
+        margin: 0;
     }
 }

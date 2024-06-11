@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dental Clinic Invoice</title>
+    <title>POS Receipt</title>
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
@@ -18,21 +18,29 @@
             <input type="tel" id="phone" name="phone" required>
             <label for="amount">Amount Paid:</label>
             <input type="number" id="amount" name="amount" required>
-            <button type="button" onclick="generateInvoice()">Enter</button>
+            <button type="button" onclick="generateReceipt()">Enter</button>
         </form>
     </div>
 
-    <div class="invoice-container" id="invoice-container">
-        <div class="invoice" id="invoice">
-            <h2>Dental Clinic</h2>
-            <h3>Invoice</h3>
-            <p id="date"></p>
-            <p id="customer-name"></p>
-            <p id="customer-age"></p>
-            <p id="customer-phone"></p>
-            <p id="customer-amount"></p>
+    <div class="receipt-container" id="receipt-container">
+        <div class="receipt" id="receipt">
+            <h2>Geek Threads</h2>
+            <p>Harihar Singh Road, Morabadi</p>
+            <p>Ranchi, Phone: 99888999877</p>
+            <p>GST No: 12345542445</p>
+            <div class="divider">--------------------------------</div>
+            <p id="date-time"></p>
+            <div class="divider">--------------------------------</div>
+            <div class="customer-details">
+                <p id="customer-name"></p>
+                <p id="customer-age"></p>
+                <p id="customer-phone"></p>
+            </div>
+            <div class="total-amount">
+                <p id="customer-amount"></p>
+            </div>
         </div>
-        <button onclick="printInvoice()">Print</button>
+        <button onclick="printReceipt()">Print</button>
     </div>
 
     <script src="./main.js"></script>
