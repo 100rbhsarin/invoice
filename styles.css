@@ -1,0 +1,72 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #769df1;
+    margin: 0;
+}
+
+.container, .invoice-container {
+    display: none;
+}
+
+#form-container {
+    display: block;
+}
+
+.container, .invoice {
+    background-color: rgb(195, 249, 244);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+.invoice {
+    width: 57mm;
+    margin: 0 auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.invoice h2, .invoice h3 {
+    margin: 5px 0;
+}
+
+.invoice p {
+    margin: 5px 0;
+}
+
+.invoice button {
+    margin-top: 10px;
+}

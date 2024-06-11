@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dental Clinic Invoice</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="container" id="form-container">
+        <h1>Enter Customer Details</h1>
+        <form id="customer-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required>
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+            <label for="amount">Amount Paid:</label>
+            <input type="number" id="amount" name="amount" required>
+            <button type="button" onclick="generateInvoice()">Enter</button>
+        </form>
+    </div>
+
+    <div class="invoice-container" id="invoice-container">
+        <div class="invoice" id="invoice">
+            <h2>Dental Clinic</h2>
+            <h3>Invoice</h3>
+            <p id="date"></p>
+            <p id="customer-name"></p>
+            <p id="customer-age"></p>
+            <p id="customer-phone"></p>
+            <p id="customer-amount"></p>
+        </div>
+        <button onclick="printInvoice()">Print</button>
+    </div>
+
+    <script src="./main.js"></script>
+</body>
+</html>
