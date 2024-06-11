@@ -11,7 +11,7 @@ function generateInvoice() {
     document.getElementById('customer-name').innerText = `Name: ${name}`;
     document.getElementById('customer-age').innerText = `Age: ${age}`;
     document.getElementById('customer-phone').innerText = `Phone Number: ${phone}`;
-    document.getElementById('customer-amount').innerText = `Amount Paid: ₹${amount}`;
+    document.getElementById('customer-amount').innerText = `Amount Paid: $${amount}`;
 
     // Hide form and show invoice
     document.getElementById('form-container').style.display = 'none';
@@ -19,6 +19,9 @@ function generateInvoice() {
 }
 
 function printInvoice() {
+    // Print the invoice twice
     window.print();
-    window.print(); // Print twice as requested
+    setTimeout(() => {
+        window.print();
+    }, 1000);  // Add a delay to ensure the print dialog appears twice
 }
