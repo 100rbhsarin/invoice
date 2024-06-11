@@ -6,12 +6,12 @@ function generateReceipt() {
     const amount = document.getElementById('amount').value;
     const dateTime = new Date().toLocaleString();
 
-    // Set receipt details
-    document.getElementById('date-time').innerText = dateTime;
-    document.getElementById('customer-name').innerText = `Customer: ${name}`;
-    document.getElementById('customer-age').innerText = `Age: ${age}`;
-    document.getElementById('customer-phone').innerText = `Phone: ${phone}`;
-    document.getElementById('customer-amount').innerText = `Total amount paid: ₹${amount}`;
+    // Set receipt details for both copies
+    document.querySelectorAll('.date-time').forEach(el => el.innerText = dateTime);
+    document.querySelectorAll('.customer-name').forEach(el => el.innerText = `Customer: ${name}`);
+    document.querySelectorAll('.customer-age').forEach(el => el.innerText = `Age: ${age}`);
+    document.querySelectorAll('.customer-phone').forEach(el => el.innerText = `Phone: ${phone}`);
+    document.querySelectorAll('.customer-amount').forEach(el => el.innerText = `Total Amount paid: ₹${amount}`);
 
     // Hide form and show receipt
     document.getElementById('form-container').style.display = 'none';
@@ -19,9 +19,6 @@ function generateReceipt() {
 }
 
 function printReceipt() {
-    // Print the receipt twice
+    // Print the receipts
     window.print();
-    setTimeout(() => {
-        window.print();
-    }, 1000);  // Add a delay to ensure the print dialog appears twice
 }

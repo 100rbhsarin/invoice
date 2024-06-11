@@ -23,21 +23,43 @@
     </div>
 
     <div class="receipt-container" id="receipt-container">
-        <div class="receipt" id="receipt">
-            <h2>Geek Threads</h2>
-            <p>Harihar Singh Road, Morabadi</p>
-            <p>Ranchi, Phone: 99888999877</p>
-            <p>GST No: 12345542445</p>
-            <div class="divider">--------------------------------</div>
-            <p id="date-time"></p>
-            <div class="divider">--------------------------------</div>
-            <div class="customer-details">
-                <p id="customer-name"></p>
-                <p id="customer-age"></p>
-                <p id="customer-phone"></p>
+        <div class="receipts">
+            <div class="receipt" id="receipt1">
+                <h2>Geek Threads</h2>
+                <p>Harihar Singh Road, Morabadi</p>
+                <p>Ranchi, Phone: 99888999877</p>
+                <p>GST No: 12345542445</p>
+                <div class="divider">--------------------------------</div>
+                <p class="date-time"></p>
+                <p>Customer receipt</p>
+                <div class="divider">--------------------------------</div>
+                <div class="customer-details">
+                    <p class="customer-name"></p>
+                    <p class="customer-age"></p>
+                    <p class="customer-phone"></p>
+                </div>
+                <div class="total-amount">
+                    <p class="customer-amount"></p>
+                </div>
             </div>
-            <div class="total-amount">
-                <p id="customer-amount"></p>
+
+            <div class="receipt" id="receipt2">
+                <h2>Geek Threads</h2>
+                <p>Harihar Singh Road, Morabadi</p>
+                <p>Ranchi, Phone: 99888999877</p>
+                <p>GST No: 12345542445</p>
+                <div class="divider">--------------------------------</div>
+                <p class="date-time"></p>
+                <p>Clinic receipt</p>
+                <div class="divider">--------------------------------</div>
+                <div class="customer-details">
+                    <p class="customer-name"></p>
+                    <p class="customer-age"></p>
+                    <p class="customer-phone"></p>
+                </div>
+                <div class="total-amount">
+                    <p class="customer-amount"></p>
+                </div>
             </div>
         </div>
         <button onclick="printReceipt()">Print</button>
